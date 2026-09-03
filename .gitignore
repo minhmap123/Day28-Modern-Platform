@@ -4,5 +4,22 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .ruff_cache/
-evidence/
 readiness-report.json
+
+# Runtime evidence is normally generated locally.  The submission rubric names
+# the files below explicitly, so version only that reviewed, secret-free set.
+evidence/*
+!evidence/
+!evidence/integration-report.json
+!evidence/ip01-kafka-consume.json
+!evidence/ip02-airflow-run.json
+!evidence/ip03-delta-history.json
+!evidence/ip04-feast-online.json
+!evidence/ip05-qdrant-search.json
+!evidence/ip06-mlflow-release.json
+!evidence/ip07-vllm-identity.json
+!evidence/ip08-gateway.json
+!evidence/ip09-grafana-dashboards.json
+!evidence/ip09-prometheus-targets.json
+!evidence/ip10-trace.json
+!evidence/verification-results.md
