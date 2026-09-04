@@ -1,4 +1,7 @@
 .venv/
+.env
+.env.*
+!.env.example
 .lab28/
 __pycache__/
 *.pyc

@@ -1,26 +1,26 @@
 {
   "topic": "data.raw",
-  "key": "it-j1-4e2c14e4",
+  "key": "it-j1-5bd18ad0",
   "partition": 1,
-  "offset": 25,
+  "offset": 26,
   "headers": {
-    "traceparent": "00-e4f9bdd915b84a3faf3b8e76d22ebddb-0e41b9e445550c3e-01",
-    "idempotency-key": "it-j1-4e2c14e4",
+    "traceparent": "00-b95c007e813d4b5899c72e97804c50d5-632d27e113ed197b-01",
+    "idempotency-key": "it-j1-5bd18ad0",
     "schema_version": "1"
   },
-  "trace_id": "e4f9bdd915b84a3faf3b8e76d22ebddb",
+  "trace_id": "b95c007e813d4b5899c72e97804c50d5",
   "value": {
     "schema_version": "1",
-    "event_id": "6d1ab50e3c8542cf97da063d1dcf4884",
-    "idempotency_key": "fb:it-j1-4e2c14e4:2678d6f6c554e93d2c40c582b9dea52a",
-    "entity_id": "it-j1-4e2c14e4",
-    "occurred_at": "2026-09-03T17:03:13.111661Z",
+    "event_id": "5f2bc3aa88fe49d38c3a3ddfda570e42",
+    "idempotency_key": "fb:it-j1-5bd18ad0:06fff61277bd32424e4660c1141ece60",
+    "entity_id": "it-j1-5bd18ad0",
+    "occurred_at": "2026-09-04T09:19:25.256506Z",
     "producer": "lab28-api",
-    "traceparent": "00-e4f9bdd915b84a3faf3b8e76d22ebddb-9b88940be7d65e53-01",
+    "traceparent": "00-b95c007e813d4b5899c72e97804c50d5-5a5f496cee2cf0a2-01",
     "payload": {
       "kind": "feedback",
-      "asker_id": "it-j1-4e2c14e4",
-      "text": "Nền tảng chạy ổn định trong bài kiểm thử 4e2c14e4.",
+      "asker_id": "it-j1-5bd18ad0",
+      "text": "Nền tảng chạy ổn định trong bài kiểm thử 5bd18ad0.",
       "rating": 5,
       "locale": "vi",
       "label": "positive"

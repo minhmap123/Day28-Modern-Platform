@@ -1,16 +1,16 @@
 {
   "entity": {
-    "asker_id": "it-j1-4e2c14e4"
+    "asker_id": "it-j1-5bd18ad0"
   },
   "feature_service": "asker_serving_v1",
   "features": {
     "schema_version": "1",
-    "asker_id": "it-j1-4e2c14e4",
+    "asker_id": "it-j1-5bd18ad0",
     "feedback_count": 1,
     "avg_rating": 5.0,
     "negative_ratio": 0.0,
-    "last_event_ts": "2026-09-03T17:03:13Z",
-    "delta_version": 10
+    "last_event_ts": "2026-09-04T09:19:25Z",
+    "delta_version": 16
   },
   "statuses": {
     "asker_id": "PRESENT",
@@ -20,6 +20,6 @@
     "negative_ratio": "PRESENT"
   },
   "degraded": false,
-  "freshness_seconds": 27.555451,
-  "lookup_ms": 179.84098699980677
+  "freshness_seconds": 44.296553,
+  "lookup_ms": 215.9436370000094
 }

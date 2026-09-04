@@ -1,9 +1,40 @@
 {
-  "reachable": false,
-  "version": null,
-  "served_models": [],
-  "vllm_metric_names": [],
-  "vllm_metric_count": 0,
-  "is_real_vllm": false,
-  "detail": "unreachable: ConnectError"
+  "source": "Kaggle notebook run https://www.kaggle.com/code/minu2k5/day-28-vllm-ip07 (version 3)",
+  "generated_at": "2026-09-04T09:30:32.029249+00:00",
+  "reachable": true,
+  "is_real_vllm": true,
+  "configured_model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "version": {
+    "version": "0.26.0"
+  },
+  "served_models": [
+    "Qwen/Qwen3-4B-Instruct-2507"
+  ],
+  "vllm_metric_count": 20,
+  "vllm_metric_names": [
+    "vllm:cache_config_info",
+    "vllm:e2e_request_latency_seconds",
+    "vllm:e2e_request_latency_seconds_bucket",
+    "vllm:e2e_request_latency_seconds_count",
+    "vllm:e2e_request_latency_seconds_created",
+    "vllm:e2e_request_latency_seconds_sum",
+    "vllm:engine_sleep_state",
+    "vllm:estimated_flops_per_gpu_created",
+    "vllm:estimated_flops_per_gpu_total",
+    "vllm:estimated_read_bytes_per_gpu_created",
+    "vllm:estimated_write_bytes_per_gpu_created",
+    "vllm:external_prefix_cache_hits_total",
+    "vllm:generation_tokens_total",
+    "vllm:inter_token_latency_seconds"
+  ],
+  "smoke": {
+    "client_trace_id": "f164cbb612274ecab3718a5c6b831370",
+    "response_model": "Qwen/Qwen3-4B-Instruct-2507",
+    "answer": "vLLM IP07 ready"
+  },
+  "detail": "vLLM identity confirmed by /version, /v1/models, vllm: metrics, and a chat completion on Kaggle T4.",
+  "notes": [
+    "No Kaggle URL, tunnel URL, or credential is stored in this evidence.",
+    "This proves the real GPU server; local end-to-end GPU tests remain conditional on an approved protected endpoint."
+  ]
 }

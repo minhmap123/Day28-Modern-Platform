@@ -48,8 +48,9 @@ nộp dữ liệu/cached artefacts):
 - `ip08-gateway.json`, `ip09-prometheus-targets.json`,
   `ip09-grafana-dashboards.json`, `ip10-trace.json` là evidence do integration
   tests truy vấn từ các control plane thật.
-- `ip07-vllm-identity.json` ghi trung thực trạng thái `reachable: false` và
-  `is_real_vllm: false`; không có mock thay thế kết quả này.
+- `ip07-vllm-identity.json` là output thực từ Kaggle T4: vLLM `0.26.0`, model
+  `Qwen/Qwen3-4B-Instruct-2507`, metric `vllm:` và một chat completion. Không
+  có mock hoặc URL/token tunnel trong evidence.
 
 ## Correctness, recovery và observability
 
@@ -115,9 +116,9 @@ policy. Đây không xác minh IP07; GPU compose và Kubernetes vẫn ép giá t
 
 ## Production gaps và bước tiếp theo
 
-1. Cần endpoint vLLM GPU thật, với `/version`, `/v1/models` và metric `vllm:`;
-   sau đó chạy lại GPU-gated J1/J3/J4. IP07 hiện là **UNVERIFIED**, không được
-   trình bày như đã pass.
+1. IP07 server identity đã được xác minh trên Kaggle T4. Để chạy GPU-gated
+   J1/J3/J4 end-to-end từ Compose, vẫn cần endpoint/tunnel được giảng viên phê
+   duyệt và bảo vệ; không thay thế bằng URL công khai hoặc mock.
 2. Cần `LANGSMITH_API_KEY` nếu muốn xác minh leg LangSmith; local OTLP/Jaeger
    hiện là bằng chứng trace deterministic của lab.
 3. Tách gateway load profile thành các mức dưới/vượt quota và implement retry

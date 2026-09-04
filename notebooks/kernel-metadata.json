@@ -1,0 +1,13 @@
+{
+  "id": "minu2k5/day-28-vllm-ip07",
+  "title": "Day 28 vLLM IP07",
+  "code_file": "kaggle_vllm_ip07.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true",
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}
