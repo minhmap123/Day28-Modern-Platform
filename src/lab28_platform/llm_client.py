@@ -81,19 +81,9 @@ class Completion:
 
 
 def _auth_headers(settings: VLLMSettings) -> dict[str, str]:
-    """Build vLLM and optional Cloudflare Access headers without logging secrets."""
+    """Build the auth header. The value is read at call time and never logged."""
     key = settings.api_key
-    headers = {"Authorization": f"Bearer {key}"} if key else {}
-    client_id = settings.access_client_id
-    client_secret = settings.access_client_secret
-    if client_id or client_secret:
-        if not (client_id and client_secret):
-            raise ValueError(
-                "LAB28_CF_ACCESS_CLIENT_ID and LAB28_CF_ACCESS_CLIENT_SECRET must be set together"
-            )
-        headers["CF-Access-Client-Id"] = client_id
-        headers["CF-Access-Client-Secret"] = client_secret
-    return headers
+    return {"Authorization": f"Bearer {key}"} if key else {}
 
 
 def probe_identity(settings: VLLMSettings, *, timeout: float = 5.0) -> VLLMIdentity:
