@@ -183,6 +183,8 @@ class VLLMSettings:
     base_url: str
     model_id: str
     api_key_env: str
+    access_client_id_env: str
+    access_client_secret_env: str
     timeout_seconds: float
     max_tokens: int
     temperature: float
@@ -194,6 +196,8 @@ class VLLMSettings:
             base_url=_env("LAB28_VLLM_BASE_URL", "http://localhost:8001/v1"),
             model_id=_env("LAB28_VLLM_MODEL_ID", "Qwen/Qwen3-1.7B"),
             api_key_env="LAB28_VLLM_API_KEY",
+            access_client_id_env="LAB28_CF_ACCESS_CLIENT_ID",
+            access_client_secret_env="LAB28_CF_ACCESS_CLIENT_SECRET",
             timeout_seconds=_env_float("LAB28_VLLM_TIMEOUT", 30.0),
             max_tokens=_env_int("LAB28_VLLM_MAX_TOKENS", 320),
             temperature=_env_float("LAB28_VLLM_TEMPERATURE", 0.2),
@@ -204,6 +208,16 @@ class VLLMSettings:
     def api_key(self) -> str | None:
         """Read the key at call time; never cache or serialise it."""
         return os.getenv(self.api_key_env)
+
+    @property
+    def access_client_id(self) -> str | None:
+        """Cloudflare Access service-token ID, read only at request time."""
+        return os.getenv(self.access_client_id_env)
+
+    @property
+    def access_client_secret(self) -> str | None:
+        """Cloudflare Access service-token secret, never serialised."""
+        return os.getenv(self.access_client_secret_env)
 
     @property
     def root_url(self) -> str:
