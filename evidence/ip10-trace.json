@@ -1,7 +1,7 @@
 {
-  "trace_id": "36512d1ab28446beb16abc201e4dffda",
-  "traceparent": "00-36512d1ab28446beb16abc201e4dffda-cb786eabc12649a0-01",
-  "dag_run_id": "it-3579b46a",
+  "trace_id": "440a2d0b0db84152ba5c50348f7eb71a",
+  "traceparent": "00-440a2d0b0db84152ba5c50348f7eb71a-dad7e211903a4268-01",
+  "dag_run_id": "it-dcc120b7",
   "span_count": 11,
   "span_names": [
     "POST /api/v1/feedback",
